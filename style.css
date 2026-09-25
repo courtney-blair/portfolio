@@ -130,5 +130,10 @@ section h2 {
   border-radius: 999px;         /* very large radius forces fully rounded/pill-shaped corners regardless of size */
   font-size: 0.9rem;            /* slightly smaller than body text, fitting for a compact tag */
   text-align: center;           /* centers text inside the pill (mostly relevant if a pill wraps to two lines) */
-  cursor:pointer;             /* changes the cursor to a pointer on hover, indicating it's clickable */
+  cursor: pointer;             /* changes the cursor to a pointer on hover, indicating it's clickable */
 }
+.interests li:hover {
+  background: var(--pink);      /* changes pill background to soft pink on hover for visual feedback */
+  color: var(--ink);            /* changes text color to dark purple on hover for contrast */
+  transition: background 0.3s, color 0.3s; /* smooth transition effect for background and text color changes */
+} 
