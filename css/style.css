@@ -35,7 +35,7 @@ body {
      is just the body/main, "auto" has no effect and does nothing. */
 }
 
-.hero h1 {
+.hero h1, .contact-info {
   font-family: 'Dancing Script', cursive; /* decorative script font for the main heading, falls back to cursive */
   font-size: 3rem;         /* large text size for visual impact as the page's main title */
   color: var(--pink-deep); /* heading color, using the deep pink token */
@@ -98,7 +98,7 @@ section h2 {
 /* ============================================
    INTERESTS SECTION
    ============================================ */
-.interests {
+.interests, .contact-info {
   text-align: center; /* centers all text content inside this section */
 }
 
@@ -112,7 +112,7 @@ section h2 {
   /* NOTE: removed "justify-content: center" - that property only applies to
      flex/grid containers. h3 is just an inline-block text element here, so
      it was being ignored. text-align + inline-block already centers it. */
-     margin: 0px; 
+  margin: 0px;
 }
 
 /* The tag/pill list container */
