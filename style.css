@@ -39,7 +39,7 @@ body {
   font-family: 'Dancing Script', cursive; /* decorative script font for the main heading, falls back to cursive */
   font-size: 3rem;         /* large text size for visual impact as the page's main title */
   color: var(--pink-deep); /* heading color, using the deep pink token */
-  margin-bottom: 0.5rem;   /* space below the heading, separating it from whatever comes next */
+  margin-bottom: 0rem;   /* space below the heading, separating it from whatever comes next */
 }
 
 /* ============================================
@@ -51,7 +51,7 @@ body {
   justify-content: center;   /* centers the nav items horizontally within the navbar */
   gap: 1rem;                 /* even spacing between each nav item (no need for manual margins) */
   list-style: none;          /* removes bullet points if the navbar is a <ul>/<ol> */
-  padding: 50px;             /* generous inner spacing on all sides of the navbar */
+  padding: 0px;             /* generous inner spacing on all sides of the navbar */
   font-size: 1.25rem;        /* slightly larger text for nav links */
 }
 
@@ -61,6 +61,8 @@ body {
 .bio {
   font-size: 1.2rem;   /* slightly larger than default body text, for emphasis/readability */
   text-align: center;  /* centers the bio text horizontally */
+  padding: 0 1rem;      /* adds horizontal padding on left/right to prevent text from touching the edges of the screen */
+  margin: 0 auto 2rem; /* shorthand: 0 top, auto left/right (centers the block), 2rem bottom spacing before next section */ 
 }
 
 /* Small subtitle/tagline, usually placed right under a heading */
@@ -75,7 +77,7 @@ body {
 main {
   max-width: 700px;              /* caps the content width so text doesn't stretch too wide on large screens */
   margin: 0 auto;                 /* top/bottom margin of 0, left/right set to "auto" - this centers the block horizontally */
-  padding: 1rem 1.5rem 4rem;      /* shorthand: 1rem top, 1.5rem left/right, 4rem bottom (extra bottom room before page ends) */
+  padding: 1rem 1rem 1rem;      /* shorthand: 1rem top, 1.5rem left/right, 4rem bottom (extra bottom room before page ends) */
 }
 
 /* ============================================
@@ -90,7 +92,7 @@ section h2 {
   color: var(--lavender);                 /* heading color - light purple */
   border-bottom: 2px solid var(--yellow); /* underline effect using a solid yellow border */
   display: inline-block;                  /* makes the border-bottom hug only the width of the text, not the full row */
-  padding-bottom: 0.25rem;                /* small gap between the text and its underline */
+  padding-bottom: 0px;                /* small gap between the text and its underline */
 }
 
 /* ============================================
@@ -105,7 +107,7 @@ section h2 {
   color: var(--lavender);                 /* same lavender color as section h2 for consistency */
   border-bottom: 2px solid var(--yellow); /* underline accent, matching section h2 */
   display: inline-block;                  /* underline hugs text width only */
-  padding-bottom: 0.25rem;                /* small gap between text and underline */
+  padding-bottom: 0px;                /* small gap between text and underline */
   text-align: center;                     /* redundant with .interests but harmless - kept for clarity/safety */
   /* NOTE: removed "justify-content: center" - that property only applies to
      flex/grid containers. h3 is just an inline-block text element here, so
