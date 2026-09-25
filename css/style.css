@@ -39,7 +39,7 @@ body {
   font-family: 'Dancing Script', cursive; /* decorative script font for the main heading, falls back to cursive */
   font-size: 3rem;         /* large text size for visual impact as the page's main title */
   color: var(--pink-deep); /* heading color, using the deep pink token */
-  margin-bottom: 0rem;   /* space below the heading, separating it from whatever comes next */
+  margin: 0rem;   /* space below the heading, separating it from whatever comes next */
 }
 
 /* ============================================
@@ -58,7 +58,7 @@ body {
 /* ============================================
    BIO TEXT
    ============================================ */
-.bio {
+.bio, .contact-info, p {
   font-size: 1.2rem;   /* slightly larger than default body text, for emphasis/readability */
   text-align: center;  /* centers the bio text horizontally */
   padding: 0 1rem;      /* adds horizontal padding on left/right to prevent text from touching the edges of the screen */
@@ -66,7 +66,7 @@ body {
 }
 
 /* Small subtitle/tagline, usually placed right under a heading */
-.tagline {
+.tagline, p {
   font-style: italic; /* slants the text to visually distinguish it as a subtitle */
   opacity: 0.75;       /* makes the text slightly translucent/faded (75% visible) for a softer look */
 }
@@ -112,6 +112,7 @@ section h2 {
   /* NOTE: removed "justify-content: center" - that property only applies to
      flex/grid containers. h3 is just an inline-block text element here, so
      it was being ignored. text-align + inline-block already centers it. */
+     margin: 0px; 
 }
 
 /* The tag/pill list container */
