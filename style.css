@@ -1,0 +1,133 @@
+/* ============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Defined on :root so they're available globally,
+   on every element in the document.
+   ============================================ */
+:root {
+  --ink: #362A46;        /* main text color - dark purple */
+  --page: #FBF6FB;       /* page background - soft off-white/pink */
+  --lavender: #C6AEE0;   /* accent color - light purple, used for headings & pills */
+  --pink: #EFB8CB;       /* accent color - soft pink (defined, not currently used below) */
+  --yellow: #F3D577;     /* accent color - used for underline borders */
+  --pink-deep: #DD8FAE;  /* accent color - deeper pink, used for hero heading */
+}
+
+/* ============================================
+   BASE PAGE STYLES
+   ============================================ */
+body {
+  margin: 0;                          /* removes the browser's default outer spacing so page backgrounds go edge-to-edge */
+  padding: 10px;                      /* adds a small buffer of space inside the body, around all content */
+  background: var(--page);            /* sets the page background color using the token above */
+  color: var(--ink);                  /* sets the default text color for the whole page */
+  font-family: 'Playfair Display', serif; /* default body font, falls back to a generic serif if it fails to load */
+  line-height: 1.6;                   /* vertical spacing between lines of text - improves readability */
+}
+
+/* ============================================
+   HERO SECTION
+   The top banner area (name, title, etc.)
+   ============================================ */
+.hero {
+  text-align: center;   /* centers inline/text content (like the h1) horizontally */
+  /* NOTE: removed "margin-top: auto" - that property only works when the
+     parent element is a flex or grid container. Since .hero's parent here
+     is just the body/main, "auto" has no effect and does nothing. */
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive; /* decorative script font for the main heading, falls back to cursive */
+  font-size: 3rem;         /* large text size for visual impact as the page's main title */
+  color: var(--pink-deep); /* heading color, using the deep pink token */
+  margin-bottom: 0.5rem;   /* space below the heading, separating it from whatever comes next */
+}
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+.navbar {
+  display: flex;             /* turns child items (nav links) into a horizontal row */
+  flex-wrap: wrap;           /* lets nav items drop to a new line if they don't all fit on one row */
+  justify-content: center;   /* centers the nav items horizontally within the navbar */
+  gap: 1rem;                 /* even spacing between each nav item (no need for manual margins) */
+  list-style: none;          /* removes bullet points if the navbar is a <ul>/<ol> */
+  padding: 50px;             /* generous inner spacing on all sides of the navbar */
+  font-size: 1.25rem;        /* slightly larger text for nav links */
+}
+
+/* ============================================
+   BIO TEXT
+   ============================================ */
+.bio {
+  font-size: 1.2rem;   /* slightly larger than default body text, for emphasis/readability */
+  text-align: center;  /* centers the bio text horizontally */
+}
+
+/* Small subtitle/tagline, usually placed right under a heading */
+.tagline {
+  font-style: italic; /* slants the text to visually distinguish it as a subtitle */
+  opacity: 0.75;       /* makes the text slightly translucent/faded (75% visible) for a softer look */
+}
+
+/* ============================================
+   MAIN CONTENT WRAPPER
+   ============================================ */
+main {
+  max-width: 700px;              /* caps the content width so text doesn't stretch too wide on large screens */
+  margin: 0 auto;                 /* top/bottom margin of 0, left/right set to "auto" - this centers the block horizontally */
+  padding: 1rem 1.5rem 4rem;      /* shorthand: 1rem top, 1.5rem left/right, 4rem bottom (extra bottom room before page ends) */
+}
+
+/* ============================================
+   SECTIONS (About, Interests, etc.)
+   ============================================ */
+section {
+  margin-bottom: 2.5rem; /* vertical spacing between one section and the next */
+}
+
+section h2 {
+  font-family: 'Dancing Script', cursive; /* decorative script font, matches hero heading style */
+  color: var(--lavender);                 /* heading color - light purple */
+  border-bottom: 2px solid var(--yellow); /* underline effect using a solid yellow border */
+  display: inline-block;                  /* makes the border-bottom hug only the width of the text, not the full row */
+  padding-bottom: 0.25rem;                /* small gap between the text and its underline */
+}
+
+/* ============================================
+   INTERESTS SECTION
+   ============================================ */
+.interests {
+  text-align: center; /* centers all text content inside this section */
+}
+
+.interests h3 {
+  font-family: 'Dancing Script', cursive; /* matches the script style used elsewhere */
+  color: var(--lavender);                 /* same lavender color as section h2 for consistency */
+  border-bottom: 2px solid var(--yellow); /* underline accent, matching section h2 */
+  display: inline-block;                  /* underline hugs text width only */
+  padding-bottom: 0.25rem;                /* small gap between text and underline */
+  text-align: center;                     /* redundant with .interests but harmless - kept for clarity/safety */
+  /* NOTE: removed "justify-content: center" - that property only applies to
+     flex/grid containers. h3 is just an inline-block text element here, so
+     it was being ignored. text-align + inline-block already centers it. */
+}
+
+/* The tag/pill list container */
+.interests ul {
+  list-style: none;          /* removes default bullet points */
+  padding: 0;                 /* removes default left padding that <ul> has in browsers */
+  display: flex;              /* lays out the <li> pills in a horizontal row */
+  flex-wrap: wrap;             /* lets pills wrap to the next line if there isn't room */
+  gap: 0.75rem;                /* even spacing between each pill */
+  justify-content: center;    /* centers the row of pills horizontally */
+}
+
+/* Individual interest "pill" tags */
+.interests li {
+  background: var(--lavender); /* pill background color */
+  color: white;                 /* text color inside the pill - white for contrast against lavender */
+  padding: 0.4rem 1rem;         /* shorthand: 0.4rem top/bottom, 1rem left/right - gives the pill its rounded, padded shape */
+  border-radius: 999px;         /* very large radius forces fully rounded/pill-shaped corners regardless of size */
+  font-size: 0.9rem;            /* slightly smaller than body text, fitting for a compact tag */
+  text-align: center;           /* centers text inside the pill (mostly relevant if a pill wraps to two lines) */
+}
