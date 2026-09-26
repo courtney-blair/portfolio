@@ -140,3 +140,14 @@ section h2 {
   color: var(--ink);            /* changes text color to dark purple on hover for contrast */
   transition: background 0.3s, color 0.3s; /* smooth transition effect for background and text color changes */
 } 
+
+.img-row {
+  max-width: 100%; /* ensures images don't exceed their container's width, maintaining responsiveness */
+  height: auto;    /* maintains the image's aspect ratio when scaling */
+  display: block;  /* removes any extra space below the image (inline-block default behavior) */
+  margin: 0 auto;  /* centers the image horizontally within its container */
+  display: flex;            /* Activates horizontal layout */
+  flex-direction: row;      /* Places items side by side (default) */
+  justify-content: center;  /* Centers the row (use 'space-between' for equal spacing) */
+  gap: 15px;                /* Easily adds space between each image */
+}
