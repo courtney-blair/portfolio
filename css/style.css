@@ -156,3 +156,8 @@ section h2 {
   justify-content: center;  /* Centers the row (use 'space-between' for equal spacing) */
   gap: 15px;                /* Easily adds space between each image */
 }
+.korean{
+  text-align:left;
+  margin-left:20px;
+
+}
