@@ -140,7 +140,12 @@ section h2 {
   color: var(--ink);            /* changes text color to dark purple on hover for contrast */
   transition: background 0.3s, color 0.3s; /* smooth transition effect for background and text color changes */
 } 
-
+.bio-fashion {
+  font-size: 1.2rem;   /* slightly larger than default body text, for emphasis/readability */
+  text-align: left;  /* centers the bio text horizontally */
+  padding: 0 1rem;      /* adds horizontal padding on left/right to prevent text from touching the edges of the screen */
+  margin: 0 auto 2rem; /* shorthand: 0 top, auto left/right (centers the block), 2rem bottom spacing before next section */ 
+}
 .img-row {
   max-width: 100%; /* ensures images don't exceed their container's width, maintaining responsiveness */
   height: auto;    /* maintains the image's aspect ratio when scaling */
